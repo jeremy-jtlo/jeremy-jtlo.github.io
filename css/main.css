@@ -1,0 +1,281 @@
+/*
+  Main CSS File
+  Styling Goes Here~
+*/
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* ========== FONTS ========== */
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/DroidSans.eot');
+  src: url('fonts/DroidSans.eot?#iefix') format('embedded-opentype'),
+       url('fonts/DroidSans.woff2') format('woff2'),
+       url('fonts/DroidSans.woff') format('woff'),
+       url('fonts/DroidSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('fonts/DroidSans-Bold.eot');
+  src: url('fonts/DroidSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/DroidSans-Bold.woff2') format('woff2'),
+       url('fonts/DroidSans-Bold.woff') format('woff'),
+       url('fonts/DroidSans-Bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Droid Sans', 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #222222;
+}
+
+.canvas {
+  width: 75%;
+  margin: 0 auto;
+  /*max-width: 75%;*/
+}
+
+section:not([id]) {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-bottom: 0.15em solid #333;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+section h3 {
+  margin-bottom: 0;
+}
+
+section p {
+  margin-top: 0;
+}
+
+/* ========== NAVIGATION ========== */
+
+nav {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 0.15em solid #333;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+#topbar {
+  top: 0;
+  left: 0;
+  background-color: #444;
+
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  /* Display should be flex items? */
+  display: inline-block;
+}
+
+section code {
+  background-color: #EEE;
+  padding: 0.5em 0.75em;
+  display: block;
+}
+
+ul.citations {
+  margin-left: 0.25em;
+  padding-left: 0.25em;
+}
+
+ul.citations li {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 1em;
+}
+
+ul.citations li strong {
+  font-weight: normal;
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* ========== BUTTONS ========== */
+.button {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #DDD;
+  background-color: #9e9e9e;
+  border-radius: 0.25em;
+  border-bottom: solid;
+  border-color: #777;
+
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.button:hover, .button:focus {
+  background-color: #555;
+  border-color: #444;
+  color: #FFF;
+}
+
+/* ========== INLINE LINKS ========== */
+
+.text-link {
+  color: #008CBA;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 300ms ease-out;
+}
+
+.text-link:hover, .text-link:focus {
+  color: #ff9800;
+}
+
+/* ========== SUBMIT BUTTONS ========== */
+
+.submit {
+  display: inline-block;
+  background-color: #4caf50;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  color: #FFF;
+  border-radius: 0.2rem;
+
+  border-bottom: solid;
+  border-color: #1b5e20;
+
+  transition: 300ms ease-out;
+}
+
+.submit:hover, .submit:focus, .submit.reset:hover, .submit.reset:focus {
+  background-color: #ff9800;
+  border-color: #ff7700;
+}
+
+.submit.reset {
+  background-color: #c60f13;
+  border-color: #960508;
+
+  transition: 300ms ease-out;
+}
+
+/* ========== FORM LABELS & FIELDS ========== */
+
+label {
+  margin-right: 2rem;
+}
+
+.text-field {
+  border-radius: 0.2rem;
+  border: 0.1rem solid #BBB;
+  border-bottom: solid #888;
+  padding-left: 1rem;
+  padding: 0.2rem 0.5rem;
+
+  display: inline-block;
+}
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+.header {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.paragraph {
+  max-width: 60%;
+}
+
+.bullet-list {
+  list-style-type: circle;
+
+}
+
+.number-list {
+  /*list-style-type: lower-alpha;*/
+  font-weight: 600;
+}
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
+
+.button.active {
+  color: #333;
+  background-color: #DDD;
+  border-color: #999;
+}
+
+.button.active:hover, .button.active:focus {
+  background-color: #555;
+  border-color: #444;
+  color: #FFF;
+}
+
+
+.product {
+  /* ~400px Max Width*/
+  max-width: 25rem;
+
+}
+.product img {
+  border-radius: 0.2rem;
+  width: 100%;
+  height: auto;
+}
+
+.product a {
+  display: inline-block;
+  background-color: #008CBA;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  color: #FFF;
+  border-radius: 0.2rem;
+
+  border-bottom: solid;
+  border-color: #007095;
+
+  width: 94%;
+  text-align: center;
+  text-transform: uppercase;
+
+  transition: 300ms ease-out;
+}
+
+.product a:hover, .product a:focus {
+  background-color: #ff9800;
+  border-color: #ff7700;
+}

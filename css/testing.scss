@@ -1,0 +1,641 @@
+/*
+  Colour Scheme: 'anggo djago'
+  https://color.adobe.com/anggo-djago-color-theme-2691053/
+
+  Main CSS File
+  Styling Goes Here~
+  
+  GLOBALS
+*/
+$dark-blue: #002A4A;
+$medium-blue: #2472CE;
+$light-blue: #6DCDEC;
+$cream: #FFF1CE;
+$light-orange: #FF9311;
+$dark-orange: #D64700;
+
+$light-grey: #DDD;
+$light-med-grey: #868686;
+$medium-grey: #515151;
+$dark-grey: #272727;
+
+$active-grey: #303030;
+
+$white: #FFFFFF;
+
+$transition-time: 500ms;
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    // transition: $transition-time;
+}
+
+/* ========== FONTS ========== */
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/DroidSans.eot');
+  src: url('fonts/DroidSans.eot?#iefix') format('embedded-opentype'),
+       url('fonts/DroidSans.woff2') format('woff2'),
+       url('fonts/DroidSans.woff') format('woff'),
+       url('fonts/DroidSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('fonts/DroidSans-Bold.eot');
+  src: url('fonts/DroidSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/DroidSans-Bold.woff2') format('woff2'),
+       url('fonts/DroidSans-Bold.woff') format('woff'),
+       url('fonts/DroidSans-Bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Droid Sans', 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #333333;
+  background-color: $light-grey;
+}
+
+.canvas {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  /*max-width: 75%;*/
+
+  &.first {
+    margin-top: 0;
+  }
+}
+
+section:not([id]) {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-bottom: 0.15em solid #333;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+section h3 {
+  margin-bottom: 0;
+}
+
+section p {
+  margin-top: 0;
+}
+
+// Utility Classes
+
+.head-spaced {
+  margin-top: 1rem;
+}
+
+.underlined {
+  border-bottom: 0.2rem solid $light-blue;
+  margin-bottom: 3rem;
+  padding: 0;
+
+  &.headline {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.centered {
+  text-align: center;
+}
+
+.full-width {
+  text-align: center;
+  width: 100%;
+}
+
+/* ========== NAVIGATION ========== */
+
+#topbar {
+  top: 0;
+  left: 0;
+  background-color: $dark-grey;
+
+  width: 100%;
+  position: fixed;
+}
+
+nav.canvas {
+  display: flex;
+  align-content: space-around;
+  margin-top: 0;
+
+  ul {
+    list-style: none;
+    
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      
+      // Bottom Border matching #topbar
+      border-bottom: 0.3rem solid $dark-grey;
+
+      transition: $transition-time;
+
+      a {
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 2rem;
+        padding: 1rem 2rem;
+
+        color: $light-grey;
+
+        transition: $transition-time;
+      } // a
+
+      &:hover, &:focus, &.active {
+        border-color: $light-blue;
+        background-color: $active-grey;
+        a {
+          color: $light-blue;
+        }
+      } // li:hover
+    } // li
+
+    li.external {
+      //TODO: Why doesn't it stick to the right side???
+      align-self: flex-end;
+      position: inherit;
+      right: 0;
+      margin-left: auto;
+      a {
+        color: $light-blue;
+      }
+
+      &:hover {
+        border-color: $light-orange;
+        a{
+          color: $light-orange;
+        }
+      } // li.external:hover
+    } // li.external
+  } //ul
+}
+
+/* ========== END NAVIGATION ========== */
+
+/* ========== FRONT PAGE ELEMENTs ========== */
+.frontpage {
+  // margin-top: 4rem;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  background-color: $dark-grey;
+  background-image: url("../img/code-cropped_compressed.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  .header {
+    font-size: 2.5rem;
+    color: $white;
+    text-shadow: 1px 1px 2px #000;
+  }
+
+  h3 {
+    color: $light-grey;
+    text-shadow: 1px 1px 2px #000;
+  }
+}
+
+
+ul.ul-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ========== END FRONT PAGE ELEMENTs ========== */
+
+/* ========== FOOTER THINGs ========== */
+footer {
+  width: 100%;
+  color: $white;
+  background-color: $dark-grey;
+
+  margin-top: 4rem;
+  padding-top: 2rem;
+
+  .canvas {
+    margin-top: 0;
+  }
+
+  h2 {
+    color: $white;
+
+    &.right {
+      text-align: right;
+    }
+
+    &.underlined {
+      margin: 0 auto;
+      margin-left: 1rem;
+      padding: 1.5rem 0;
+    }
+  }
+  ul li {
+    text-align: right;
+    font-weight: 400;
+    color: $white;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      transition: $transition-time;
+      &:hover, &:focus {
+        color: $light-blue;
+      }
+    }
+  }
+
+  .flex-container .col-3of12 {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+/* ========== END FOOTER THINGs ========== */
+
+section code {
+  background-color: #EEE;
+  padding: 0.5em 0.75em;
+  display: block;
+}
+
+ul.citations {
+  margin-left: 0.25em;
+  padding-left: 0.25em;
+}
+
+ul.citations li {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 1em;
+}
+
+ul.citations li strong {
+  font-weight: normal;
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* ========== BUTTONS ========== */
+.button {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  color: $light-grey;
+  background-color: $medium-blue;
+  border-radius: 0.25em;
+  border-bottom: solid;
+  border-color: $dark-blue;
+
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: $transition-time;
+
+  &:hover, &:focus {
+  background-color: $light-orange;
+  border-color: $dark-orange;
+  color: #FFF;
+  }
+
+  &.full-width {
+    margin: 0.5rem auto;
+
+    &.next-project {
+      margin-top: 4.75rem;
+    }
+  }
+
+  &.first-vertical {
+    margin-top: 0;
+  }
+
+  &.first-horizontal {
+    margin-left: 0;
+  }
+}
+
+/* ========== INLINE LINKS ========== */
+
+.text-link {
+  color: $light-blue;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 300ms ease-out;
+
+  &:hover, &:focus {
+    color: $light-orange;
+  }
+
+  &.dark {
+    color: $medium-blue;
+
+    &:hover, &:focus {
+      color: $light-blue;
+    }
+  }
+}
+
+// .text-link:hover, .text-link:focus {
+//   color: #ff9800;
+// }
+
+/* ========== SUBMIT BUTTONS ========== */
+
+.submit {
+  display: inline-block;
+  background-color: $medium-blue;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  color: #FFF;
+  border-radius: 0.2rem;
+
+  border-bottom: solid;
+  border-color: $dark-blue;
+
+  transition: 300ms ease-out;
+}
+
+.submit:hover, .submit:focus, .submit.reset:hover, .submit.reset:focus {
+  background-color: #ff9800;
+  border-color: #ff7700;
+}
+
+.submit.reset {
+  background-color: #c60f13;
+  border-color: #960508;
+
+  transition: 300ms ease-out;
+}
+
+/* ========== FORM LABELS & FIELDS ========== */
+
+label {
+  margin-right: 2rem;
+}
+
+.text-field {
+  border-radius: 0.2rem;
+  border: 0.1rem solid #BBB;
+  border-bottom: solid #888;
+  padding-left: 1rem;
+  padding: 0.2rem 0.5rem;
+
+  display: inline-block;
+}
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  color: $medium-grey;
+  font-weight: 400;
+  margin-top: 0;
+
+  &.right {
+    padding-left: 1rem;
+  }
+
+  .text-link {
+    color: $medium-blue;
+  }
+}
+
+h3 {
+  margin-top: 0.5rem;
+  font-weight: 400;
+  color: $light-med-grey;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 3rem;
+  // text-align: center;
+
+  li {
+    padding: 0.5rem 0;
+    color: $dark-blue;
+    font-weight: 600;
+  }
+}
+
+.header {
+  font-weight: 400;
+  font-size: 2.3rem;
+  color: $medium-grey;
+
+  &.with-link {
+    margin-bottom: 0.5rem;
+  }
+}
+
+p {
+  // We want READABILITY! READABILITY FOR SPIDER-MAN
+  line-height: 150%;
+
+  &.left {
+  padding: 0;
+  padding-right: 1rem;
+  }
+
+  &.right {
+    padding: 0;
+    padding-left: 1rem;
+    // text-align: right;
+  }
+
+
+}
+
+
+
+.paragraph {
+  max-width: 60%;
+}
+
+.number-list {
+  /*list-style-type: lower-alpha;*/
+  font-weight: 600;
+}
+
+/* ========== IMAGES ========== */
+img {
+  max-width: 100%;
+  height: auto;
+
+  float: none;
+  display: block;
+  margin: 0 auto;
+
+  transition: $transition-time;
+}
+
+.image-link {
+  transition: $transition-time;
+
+  img:hover, img:focus {
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+    box-shadow: 0 0 1rem $medium-grey;
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
+
+.button.active {
+  color: #333;
+  background-color: #DDD;
+  border-color: #999;
+}
+
+.button.active:hover, .button.active:focus {
+  background-color: #555;
+  border-color: #444;
+  color: #FFF;
+}
+
+/* 
+  MEDIA QUERIES -------------------
+*/
+
+// Project buttons doing weird things
+@media(max-width: 74rem) {
+  .button.full-width.next-project {
+      margin-top: 0;
+  }
+}
+
+// Title bar doing weird things
+@media(max-width: 60.43rem){
+
+  .frontpage {
+    padding-left: 2rem;
+    height: 20rem;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+}
+
+// Max canvas width (Tablet)
+@media(max-width: 50rem) {
+
+  .frontpage {
+    height: 15rem;
+    padding: 0;
+  }
+
+  nav.canvas {
+    padding: 0;
+
+    ul li {
+      a {
+        padding: 1rem 1rem;
+        line-height: 3rem;
+      }
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .canvas {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  #topbar {
+    position: relative;
+  }
+
+  h2 {
+    &.right {
+      padding: 0;
+      margin-top: 1rem;
+    }
+    &.header {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    &.right {
+      padding: 0;
+    }
+  }
+
+  footer {
+    padding-top: 0;
+  }
+
+}
+
+// Phone-ish layout
+@media(max-width: 32.25rem) {
+
+  .frontpage {
+    height: 25rem;
+    background-size: auto;
+  }
+
+  nav.canvas ul li {
+    width: 100%;
+    a {
+      width: 100%;
+    }
+  }
+
+  nav.canvas ul {
+    width: 100%;
+  }
+ 
+}
+
+// THE SHADOW REALM: IE10 and 11 Support
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .frontpage {
+    justify-content: flex-start;
+  }
+}

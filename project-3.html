@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Project Work - AWS Database Simulator</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/main.css"> -->
+		<link rel="stylesheet" href="css/testing.css">
+        <link rel="stylesheet" href="css/flex.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css">
+	</head>
+	<body>
+
+		<div id="topbar">
+
+		    <nav class="canvas">
+		      
+		      <!-- <h2>On this page:</h2> -->
+		      <ul class="ul-flex">
+		      	<li>
+		          <a href="index.html">Home</a>
+		        </li>
+		        <li class="active">
+		          <a href="index.html#projects">Projects</a>
+		        </li>
+		        <li>
+		          <a href="index.html#about_me">About Me</a>
+		        </li>
+		        <li class="external">
+		        	<a href="https://github.com/jeremy-jtlo" target="_blank">My GitHub <i class="fi-social-github size-16">&nbsp;</i></a>
+		        </li>
+		      </ul>
+
+		    </nav> <!-- end of nav.canvas -->
+	    </div> <!-- end of #topbar -->
+
+	    <div class="canvas">
+
+	    <div class="flex-container underlined">
+	    	<div class="col-8of12">
+	    		<h1 class="header with-link">AWS Database Simulator</h1>
+	    		<h3>DB synchronization with Amazon Web Services. <a class="text-link" href="https://github.com/ginzoya/Failure-Tolerant-System">View it on GitHub ➔</a></h3>
+	    	</div> <!-- end of .col-8of12 -->
+	    	<div class="col-4of12 has-buttons right">
+	    		<a class="button full-width next-project" href="project-1.html">See Another Project</a>
+	    	</div> <!-- end of .col-4of12.has-buttons.right -->
+	    </div> <!-- end of .flex-container.underlined -->
+
+	    <div class="flex-container first padded-1">
+	    	<div class="col-6of12">
+	    		<h2>How It Started</h2>
+	    		<p class="left">
+	    		For the final stretch of our 4th year cloud computing course at SFU, 3 friends and I teamed up to tackle <a class="text-link dark" href="http://474.cmpt.sfu.ca/public/failtol.html">this assignment</a>. Throughout the semester, we had learned how to use EC2, DynamoDB, and SQS in our lessons. We were to write out a locally hosted <strong>front end</strong> and <strong>back end</strong> to coordinate messages going to and from Amazon SQS. The queueing system would provide a means of communication between the provided users and the 3 database instances we were attempting to run using DynamoDB. The <strong>ZooKeeper</strong> and <strong>Publish/Subscribe</strong> modules given would be means by which our databases would (or would not) cooperate.
+	    		</p>
+	    		<p class="left">
+	    		This assignment's main objective was to learn how to keep multiple databases up to date with each other amidst <em>delayed, deleted, or out-of-order messages</em>, and I feel all of our team members have gained valuable experience from submitting this project.
+	    		</p>
+
+	    	</div> <!-- end of .col-6of12 -->
+	    	<div class="col-6of12">
+	    		<img src="img/failtol3.png" alt="Failure tolerance diagram">
+	    	</div> <!-- end of .col-6of12 -->
+	    </div> <!-- end of .flex-container -->
+
+	    <div class="flex-container padded-1">
+	    	<div class="col-6of12">
+	    		<img src="img/failtol1.png" alt="Screenshot of project repo 1">
+	    	</div>
+	    	<div class="col-6of12">
+	    		<h2 class="right">Game Plan</h2>
+	    		<p class="right">
+	    		All our team was given at the beginning was outlined in a diagram: Zookeeper, the messaging queues for SQS, a publish/subscribe framework, and request/response clients. Using SFU's in-house <strong>GitLab</strong> instance, we divided up work amongst ourselves according to our schedules and proficiencies: Kevin and Aaron were to handle how databases communicate with each other and the queues, Geoff would handle the DB logic itself, and I was in charge of the front and back end logic.
+	    		</p>
+	    		<p class="right">
+	    		As things progressed, we found that some tasks and issues were being completed quicker than others. Workloads were underestimated, and other areas we finished quicker than expected. Plenty of discussion and re-assigning went on as we progressed to delivery.
+	    		</p>
+	    	</div>
+	    </div> <!-- end of .flex-container -->
+
+	    <div class="flex-container underlined padded-2">
+	    	<div class="col-6of12">
+	    		<h2>Lessons Learned</h2>
+	    		<p class="left">
+	    		With the advent of widespread cloud computing and moving the burden of hardware maintenance to large data centers, software makers have found ways to save countless man-hours on keeping their machines running optimally. By doing so, however, we end up with new issues in latency and message delivery both within and outside of our systems. Are the databases still in sync? Have we dropped a critical message between some of our VMs? How will we deal with that?
+	    		</p>
+	    		<p class="left">
+	    		Although the original milestones, comments and issue metadata were lost in the Gitlab migration, I hope the remaining records in our repository expose enough of the struggle we endured to complete this project.
+	    		</p>
+
+	    	</div> <!-- end of .col-6of12 -->
+	    	<div class="col-6of12">
+	    		<img src="img/failtol2.png" alt="Screenshot of project repo 2">
+	    	</div> <!-- end of .col-6of12 -->
+	    </div> <!-- end of .flex-container -->
+
+		<!-- Below The Paragraphs -->
+	    <div class="flex-container">
+	    	<div class="col-4of12">
+	    	<h2 class="centered">Project Status</h2>
+	    	<p class="centered">
+	    	<strong>
+	    		Delivered
+	    	</strong>
+	    	</p>
+	    	</div> <!-- end of .col-3of12 -->
+	    	<div class="col-4of12">
+	    	<h2 class="centered">Components</h2>
+	    	<p class="centered">
+	    	<strong>
+	    		Python, KaZoo, SQS, DynamoDB, Bottle.py, Boto
+	    	</strong>
+	    	</p>
+	    	</div> <!-- end of .col-4of12 -->
+	    	<div class="col-4of12 has-buttons">
+	    	<h2 class="centered">What Would I Change?</h2>
+	    	<p class="centered">
+	    		<strong>Absolutely nothing. Great working with this team.</strong>
+	    	</p>
+	    	</div> <!-- end of .col-4of12 -->
+	    </div> <!-- end of .flex-container -->
+	    </div> <!-- end of .canvas -->
+
+	    <footer>
+			<div class="canvas">
+				<div class="flex-container">
+					<div class="col-6of12"></div> <!-- end of .col-6of12 -->
+					<div class="col-3of12">
+						<h2 class="right underlined">Jeremy's Site</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="index.html#projects">Projects</a></li>
+							<li><a href="index.html#about_me">About Me</a></li>
+						</ul>
+					</div> <!-- end of .col-3of12 -->
+					<div class="col-3of12">
+						<h2 class="right underlined">Contact Me</h2>
+						<ul>
+							<li><a href="mailto:jtlo@sfu.ca">jtlo@sfu.ca</a></li>
+							<li><a href="https://ca.linkedin.com/in/jeremy-lo-7131017b">LinkedIn</a></li>
+							<li><a href="https://github.com/jeremy-jtlo" target="_blank">GitHub</a></li>
+						</ul>
+					</div> <!-- end of .col-3of12 -->
+				</div> <!-- end of .flex-container -->
+			</div> <!-- end of .canvas -->
+		</footer>
+	</body>
+</html>
