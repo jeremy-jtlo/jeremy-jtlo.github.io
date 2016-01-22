@@ -4,6 +4,10 @@
   justify-content: space-between;
   margin-top: 1rem;
 
+  &.center-content {
+    align-items: center;
+  }
+
   &.first {
     margin-top: 0rem;
   }
