@@ -16,6 +16,10 @@
     margin-top: 3rem;
   }
 
+  &.space-bottom {
+    margin-bottom: 3rem;
+  }
+
   &.padded-1 {
     padding-bottom: 1rem;
   }
@@ -46,6 +50,10 @@
     width: 50%;
   }
 
+  .col-8of12 {
+    width: 66%;
+  }
+
   .col-9of12 {
     width: 75%;
   }
@@ -73,6 +81,9 @@
     //   width: 50%;
     // }
     .col-6of12 {
+      width: 100%;
+    }
+    .col-8of12 {
       width: 100%;
     }
     .col-9of12 {

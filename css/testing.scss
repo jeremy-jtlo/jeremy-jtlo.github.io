@@ -20,6 +20,7 @@ $medium-grey: #515151;
 $dark-grey: #272727;
 
 $active-grey: #303030;
+$border-grey: rgba(186, 186, 186, 0.5);
 
 $white: #FFFFFF;
 
@@ -103,8 +104,16 @@ section p {
   margin-bottom: 3rem;
   padding: 0;
 
+  &.project-head {
+    margin-bottom: 0;
+  }
+
   &.headline {
     margin-bottom: 1.5rem;
+  }
+
+  &.thin {
+    border-bottom: 0.05rem solid $border-grey;
   }
 }
 
@@ -364,6 +373,11 @@ cite {
   }
 }
 
+.back-link {
+  padding-top: 0;
+  margin: 0px auto;
+}
+
 // .text-link:hover, .text-link:focus {
 //   color: #ff9800;
 // }
@@ -465,7 +479,8 @@ ul {
 
 p {
   // We want READABILITY! READABILITY FOR SPIDER-MAN
-  line-height: 150%;
+  line-height: 185%;
+  font-family: 'Open Sans', sans-serif;
 
   &.left {
   padding: 0;
@@ -502,6 +517,7 @@ img {
   margin: 0 auto;
 
   transition: $transition-time;
+  width: 100%;
 }
 
 .image-link {
