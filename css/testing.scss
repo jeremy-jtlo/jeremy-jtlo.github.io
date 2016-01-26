@@ -465,6 +465,14 @@ ul {
     color: $dark-blue;
     font-weight: 600;
   }
+
+  &.no-space {
+    margin-left: auto;
+  }
+
+  &.right {
+    padding: 0px 0px 0px 1rem;
+  }
 }
 
 .header {
