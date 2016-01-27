@@ -39,85 +39,155 @@
 
 	    <div class="canvas">
 
-	    <div class="flex-container underlined">
-	    	<div class="col-8of12">
+	    <div class="flex-container underlined project-head center-content">
+	    	<div class="col-12of12">
 	    		<h1 class="header with-link">AWS Database Simulator</h1>
-	    		<h3>DB synchronization with Amazon Web Services. <a class="text-link" href="https://github.com/ginzoya/Failure-Tolerant-System">View it on GitHub ➔</a></h3>
+	    		<h3>Demonstrating DB synchronization with various Amazon Web Services. <a class="text-link dark" href="https://github.com/ginzoya/Failure-Tolerant-System" target="_blank">View it on GitHub →</a></h3>
 	    	</div> <!-- end of .col-8of12 -->
-	    	<div class="col-4of12 has-buttons right">
-	    		<a class="button full-width next-project" href="project-1.html">See Another Project</a>
-	    	</div> <!-- end of .col-4of12.has-buttons.right -->
 	    </div> <!-- end of .flex-container.underlined -->
 
-	    <div class="flex-container first padded-1 center-content">
-	    	<div class="col-6of12">
-	    		<h2>How It Started</h2>
-	    		<p class="left">
-	    		For the final stretch of our 4th year cloud computing course at SFU, 3 friends and I teamed up to tackle <a class="text-link dark" href="http://474.cmpt.sfu.ca/public/failtol.html">this assignment</a>. Throughout the semester, we had learned how to use EC2, DynamoDB, and SQS in our lessons. We were to write out a locally hosted <strong>front end</strong> and <strong>back end</strong> to coordinate messages going to and from Amazon SQS. The queueing system would provide a means of communication between the provided users and the 3 database instances we were attempting to run using DynamoDB. The <strong>ZooKeeper</strong> and <strong>Publish/Subscribe</strong> modules given would be means by which our databases would (or would not) cooperate.
-	    		</p>
-	    		<p class="left">
-	    		This assignment's main objective was to learn how to keep multiple databases up to date with each other amidst <em>delayed, deleted, or out-of-order messages</em>, and I feel all of our team members have gained valuable experience from submitting this project.
-	    		</p>
+	    <div class="flex-container center-content">
+	    	<div class="col-12of12">
+	    		<h3 class="back-link">
+	    			<a class="text-link dark" href="index.html#projects">
+	    				← Back to Projects
+	    			</a>
+	    		</h3>
+	    	</div> <!-- end of .col-12of12 -->
+	    </div> <!-- end of .flex-container.center-content -->
 
-	    	</div> <!-- end of .col-6of12 -->
-	    	<div class="col-6of12">
-	    		<img src="img/failtol3.png" alt="Failure tolerance diagram">
-	    	</div> <!-- end of .col-6of12 -->
-	    </div> <!-- end of .flex-container -->
+	    <!-- MAIN IMAGE -->
 
-	    <div class="flex-container padded-1 center-content">
+	    <div class="flex-container center-content padded-1 space-top">
+	    	<div class="col-12of12">
+	    		<a href="img/failtol2.png" target="_blank"><img src="img/failtol2.png" alt="Homepage screenshot 1"></a>
+	    	</div> <!-- end of .col-12of12 -->
+	    </div> <!-- end of .flex-container.center-content -->
+
+	    <!-- END MAIN IMAGE -->
+
+	    <div class="flex-container underlined thin padded-3 space-top">
 	    	<div class="col-6of12">
-	    		<img src="img/failtol1.png" alt="Screenshot of project repo 1">
+	    		<h2 class="left">problem</h2>
+	    		<p class="left">
+	    		The final project for <a href="http://474.cmpt.sfu.ca/public/" class="text-link dark" target="_blank">CMPT 474</a>, a course centering on cloud computing and Amazon Web Services. Using a combination of knowledge from lessons on queueing, database management, and error handling, we were to synchronize the actions performed by 3 database processes amidst dropped, delayed, or out-of-order messages amongst them. Full assignment description is <a href="http://474.cmpt.sfu.ca/public/failtol.html" class="text-link dark" target="_blank">here</a>.
+	    		</p>
 	    	</div>
 	    	<div class="col-6of12">
-	    		<h2 class="right">Game Plan</h2>
+	    		<h2 class="right">my solution</h2>
 	    		<p class="right">
-	    		All our team was given at the beginning was outlined in a diagram: Zookeeper, the messaging queues for SQS, a publish/subscribe framework, and request/response clients. Using SFU's in-house <strong>GitLab</strong> instance, we divided up work amongst ourselves according to our schedules and proficiencies: Kevin and Aaron were to handle how databases communicate with each other and the queues, Geoff would handle the DB logic itself, and I was in charge of the front and back end logic.
-	    		</p>
-	    		<p class="right">
-	    		As things progressed, we found that some tasks and issues were being completed quicker than others. Workloads were underestimated, and other areas we finished quicker than expected. Plenty of discussion and re-assigning went on as we progressed to delivery.
+	    		This one was a <em>team effort</em>. In a group of 4 members including myself, we divided up the work and went at it. Our group needed someone to write the launcher script, someone to handle database actions, someone to cover communication between database instances, and someone to handle the web servers that would send or receive user messages via the bottle.py web server.
 	    		</p>
 	    	</div>
 	    </div> <!-- end of .flex-container -->
 
-	    <div class="flex-container underlined padded-2 center-content">
+	    <div class="flex-container underlined thin padded-3 space-top">
 	    	<div class="col-6of12">
-	    		<h2>Lessons Learned</h2>
+	    		<h2 class="left">approach</h2>
 	    		<p class="left">
-	    		With the advent of widespread cloud computing and moving the burden of hardware maintenance to large data centers, software makers have found ways to save countless man-hours on keeping their machines running optimally. By doing so, however, we end up with new issues in latency and message delivery both within and outside of our systems. Are the databases still in sync? Have we dropped a critical message between some of our VMs? How will we deal with that?
+	    		When dealing with a 4th year course at SFU, you definitely don't want to mess around. Thankfully, the team I assembled was composed of close allies I knew I could trust from the beginning: my two friends Geoff(god1) and Kevin, as well as my own brother Aaron(ginzoya). Conveniently, we had 4 pairs of hands and 4 major tasks to focus on. Aaron volunteered to handle database logic, Kevin would write out functions to enqueue and dequeue messages from SQS, Geoff agreed to start working on the communication between DBs, and I handled the front/back ends with bottle.py.
 	    		</p>
-	    		<p class="left">
-	    		Although the original milestones, comments and issue metadata were lost in the Gitlab migration, I hope the remaining records in our repository expose enough of the struggle we endured to complete this project.
-	    		</p>
+	    	</div> <!-- end of .col-8of12 -->
+	    	<div class="col-3of12">
+	    		<h2 class="right">skills used</h2>
+	    		<ul class="no-space right">
+	    			<li>Collaboration</li>
+	    			<li>Managing roles</li>
+	    			<li>(Human) load balancing</li>
+	    		</ul>
+	    	</div><!-- end of .col-4of12 -->
+	    	<div class="col-3of12">
+	    		<h2 class="right">tools</h2>
+	    		<ul class="no-space right">
+	    			<li>Python (Bottle.py, Boto)</li>
+	    			<li>ZooKeeper</li>
+	    			<li>Amazon SQS</li>
+	    			<li>Amazon DynamoDB</li>
+	    		</ul>
+	    	</div><!-- end of .col-4of12 -->
+	    </div> <!-- end of .flex-container -->
 
-	    	</div> <!-- end of .col-6of12 -->
+	    <div class="flex-container underlined thin padded-3 space-top">
 	    	<div class="col-6of12">
-	    		<img src="img/failtol2.png" alt="Screenshot of project repo 2">
-	    	</div> <!-- end of .col-6of12 -->
+	    		<h2 class="left">execution</h2>
+	    		<p class="left">
+	    		The technologies involved with this project were fairly simple. We were given code for tools called Zookeeper and &quot;Publish/Subscribe,&quot; which would allow our databases to communicate with each other. In addition to this, request clients and queues were also provided, but the functionality for orchestrating the whole operation was up to us.<br><br>
+
+	    		As work progressed, we noticed some tasks were easier to complete than others. Particularly, the work I was assigned on the web front end and back end did not take long at all -- it ended up being a couple calls to push or pull JSON with Amazon's Simple Queueing Service. With my hands free of that, I could shift my focus to assisting the other members on their issues, whether it was advice and discussion on IM, or completing merge requests.<br><br>
+
+	    		Thanks to our coordinated efforts, the project was delivered on time. We may have strayed from our original duties, but it was thanks to the shifting of hands that anything was completed at all.
+	    		</p>
+	    	</div>
+	    	<div class="col-6of12">
+	    		<h2 class="right">reflection</h2>
+	    		<p class="right">
+	    		Things certainly didn't stick to the original plan very well, but the plan ended up being less significant in the long run. What mattered during this project was how we as a team reacted to rising issues, which I feel was handled very well. The moment any problem arose, someone would report it to the team's group chat so it could be dealt with. Of course, there were more tools provided by our repo for coordinating on problems.<br><br>
+
+	    		Unfortunately in the migration from <strong>SFU's GitLab</strong> to <strong>Github</strong>, all of the issues and discussion threads we had made were lost. The features provided by issues, tagging, and assignment, however, proved to be invaluable to our problem-solving. Some issues persisted over the course of a night and we'd all fall asleep before it could be resolved. This wasn't a problem, though, because there would always be an issue with comments and an assignee to review in the morning.<br><br>
+
+	    		Overall, this exercise was a good refresher on how to use the provided tools to collaborate on complicated projects. Though a task may be large, tools like GitLab and GitHub allow us to break things down into more manageable, trackable pieces.
+	    		</p>
+	    	</div>
+	    </div> <!-- end of .flex-container -->
+
+	    <div class="flex-container">
+	    	<div class="col-12of12">
+	    		<h2 class="centered">images</h2>
+	    	</div>
+	    </div>
+
+	    <div class="flex-container underlined padded-3">
+	    	<div class="col-12of12 side-padded gallery">
+	    		<p class="centered">
+	    			no images available
+	    		</p>
+	    	</div><!-- end of .col-4of12 -->
 	    </div> <!-- end of .flex-container -->
 
 		<!-- Below The Paragraphs -->
-	    <div class="flex-container">
+	    <div class="flex-container space-top">
 	    	<div class="col-4of12">
-	    	<h2 class="centered">Project Status</h2>
+	    	<h2 class="centered">main objectives</h2>
+	    	<!-- <ul class="">
+	    		<li>Foundation</li>
+	    		<li>SASS/Compass</li>
+	    		<li>JavaScript</li>
+	    		<li>Html, CSS</li>
+	    	</ul> -->
+	    	<p class="centered">
+	    	<strong>
+	    		Collaboration
+	    	</strong>
+	    	</p>
+	    	
+	    	</div> <!-- end of .col-3of12 -->
+	    	<div class="col-4of12">
+	    	<h2 class="centered">project status</h2>
+	    	<!-- <ul class="">
+	    		<li>HTML, CSS</li>
+	    		<li>JS Logic</li>
+	    		<li>Planning</li>
+	    		<li>Managing issues and new features</li>
+	    	</ul> -->
 	    	<p class="centered">
 	    	<strong>
 	    		Delivered
 	    	</strong>
 	    	</p>
-	    	</div> <!-- end of .col-3of12 -->
-	    	<div class="col-4of12">
-	    	<h2 class="centered">Components</h2>
-	    	<p class="centered">
-	    	<strong>
-	    		Python, KaZoo, SQS, DynamoDB, Bottle.py, Boto
-	    	</strong>
-	    	</p>
 	    	</div> <!-- end of .col-4of12 -->
 	    	<div class="col-4of12 has-buttons">
-	    	<h2 class="centered">What Would I Change?</h2>
+	    	<h2 class="centered">what would I change?</h2>
+	    	<!-- <ul class="">
+	    		<li>Writing code for a team environment</li>
+	    		<li>Proper use of Git/GitHub tools</li>
+	    		<li>Coordination on issues and feature requests</li>
+	    		<li>Learning to use new frameworks</li>
+	    	</ul> -->
+	    	<!-- <p class="centered">
+	    		Properly applying collaboration tools in Git
+	    	</p> -->
 	    	<p class="centered">
-	    		<strong>Absolutely nothing. Great working with this team.</strong>
+	    		<strong>Nothing -- it was fantastic working with this team</strong>
 	    	</p>
 	    	</div> <!-- end of .col-4of12 -->
 	    </div> <!-- end of .flex-container -->

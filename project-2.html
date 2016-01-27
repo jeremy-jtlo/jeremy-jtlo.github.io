@@ -39,81 +39,177 @@
 
 	    <div class="canvas">
 
-	    <div class="flex-container underlined">
-	    	<div class="col-8of12">
+	    <div class="flex-container underlined project-head center-content">
+	    	<div class="col-12of12">
 	    		<h1 class="header with-link">DCA 2015 Website</h1>
-	    		<h3>Promotional website for Debate Camp America 2015. [CURRENTLY OFFLINE]<!-- <a class="text-link" href="http://debatecamp.co">Live Site Here ➔</a></h3> -->
+	    		<h3>Promotional website for Debate Camp America 2015. [CURRENTLY OFFLINE]</h3>
 	    	</div> <!-- end of .col-8of12 -->
-	    	<div class="col-4of12 has-buttons right">
-	    		<a class="button full-width next-project" href="project-3.html">See Another Project</a>
-	    	</div> <!-- end of .col-4of12.has-buttons.right -->
 	    </div> <!-- end of .flex-container.underlined -->
 
-	    <div class="flex-container first padded-1 center-content">
-	    	<div class="col-6of12">
-	    		<h2>How It Started</h2>
+	    <div class="flex-container center-content">
+	    	<div class="col-12of12">
+	    		<h3 class="back-link">
+	    			<a class="text-link dark" href="index.html#projects">
+	    				← Back to Projects
+	    			</a>
+	    		</h3>
+	    	</div> <!-- end of .col-12of12 -->
+	    </div> <!-- end of .flex-container.center-content -->
+
+	    <!-- MAIN IMAGE -->
+
+	    <div class="flex-container center-content padded-1 space-top">
+	    	<div class="col-12of12">
+	    		<a href="img/dca1_compressed.png" target="_blank"><img src="img/dca1_compressed.png" alt="Homepage screenshot 1"></a>
+	    	</div> <!-- end of .col-12of12 -->
+	    </div> <!-- end of .flex-container.center-content -->
+
+	    <!-- END MAIN IMAGE -->
+
+	    <div class="flex-container padded-1 space-top">
+	    	<div class="col-8of12">
+	    		<h2 class="warning">UPDATE</h2>
 	    		<p class="left">
-	    		<strong>UPDATE:</strong> Due to disagreements between my client and their organization, the DCA 2015 website had to be taken offline until further notice. Apologies for the inconvenience.
-	    		<br><br>
-	    		The DCA 2015 website is actually the very first <em>freelance</em> task I've agreed to. It was quite unexpected, as I had just started a new semester and was approached by an old friend with a project that &quot;had to be delivered by Friday&quot;. Not one to turn down someone I've known since elementary school, I agreed and buckled down. Little did I know what difficulties such time constraints can place on work like this.
+	    			As of December 2015, <a class="text-link dark" href="http://debatecamp.co" target="_blank">debatecamp.co</a> had to be taken offline due to some disagreements with my client and an organization they were affiliated with. While I regret that I cannot show the live site, I've provided a small image gallery to show off what it looked like in the short 3 months it was online.
 	    		</p>
+	    	</div>
+	    	<div class="col-4of12">
+	    		&nbsp;
+	    	</div>
+	    </div>
 
-	    	</div> <!-- end of .col-6of12 -->
+	    <div class="flex-container underlined thin padded-3 space-top">
 	    	<div class="col-6of12">
-	    		<img src="img/dca1_compressed.png" alt="DCA site screenshot 1">
-	    	</div> <!-- end of .col-6of12 -->
-	    </div> <!-- end of .flex-container -->
-
-	    <div class="flex-container padded-1 center-content">
-	    	<div class="col-6of12">
-	    		<img src="img/dca2_compressed.png" alt="DCA site screenshot 2">
+	    		<h2 class="left">problem</h2>
+	    		<p class="left">
+	    		My client approached me with a proposal for a supposedly simple website needed as promotional material for an event he was organizing later in the year. It was emphasized in our talks that it absolutely <em>had</em> to be delivered &quot;by next Friday,&quot; effectively giving me about <strong>6 days</strong> to bring the whole project to production.
+	    		</p>
 	    	</div>
 	    	<div class="col-6of12">
-	    		<h2 class="right">Game Plan</h2>
+	    		<h2 class="right">my solution</h2>
 	    		<p class="right">
-	    		With the incredible time crunch, everything from layout and number of pages to styling and alignment had to be cranked out within 6 sessions. With this in mind, I opted to use Foundation and SASS, as I didn't have the time to properly implement a grid system or CMS myself. Thankfully, my contact for this client happened to be a photographer and told me to just focus on the structure of the pages, as he would provide the photos and raw text.
-	    		</p>
-	    		<p class="right">
-	    		Over the course of 6 work sessions in a small coffee shop along North Road (<a class="text-link dark" href="https://www.facebook.com/pages/Coffee-Monster/415413655278190">Coffee Monster</a>; try their affogato!), we built and deployed the site just in time for the client to begin advertising their event.
+	    		Judging by how easy my last project was with the Foundation framework, I figured it couldn't hurt to give it another try. With some more exploration into Foundation's features and its reusable Building Blocks, the construction of the DCA 2015 website became much more efficient.
 	    		</p>
 	    	</div>
 	    </div> <!-- end of .flex-container -->
 
-	    <div class="flex-container underlined padded-2 center-content">
+	    <div class="flex-container underlined thin padded-3 space-top">
 	    	<div class="col-6of12">
-	    		<h2>Lessons Learned</h2>
+	    		<h2 class="left">approach</h2>
 	    		<p class="left">
-	    		Debate Camp America's website ended up being quite the test of endurance. Going into it, I was not quite prepared for the gauntlet that awaited me on the other side: writing out pages with non-finalized architecture, filling out schedules for events that hadn't yet been planned, and even implementing features or pages that were never included in the initial spec. The entire experience has shed a new light on how I view freelance work, giving me a newfound appreciation for the structure and stability of my co-op placements.
+	    		With the deadline effectively hanging over my head, there was little time to lay solid groundwork for the website's structure and information architecture. Thankfully, the one who put me in contact with the client happened to be an old highschool friend of mine, who also happened to be on board with this project (which was why he called me, I imagine). His role for the promotional materials was photo editor and translator -- all the images and text written on the site would first go through him. After some discussion, we settled that the client's requirements would give us material for 5 pages: <em>Home</em>, <em>About</em>, <em>Staff</em>, <em>Details</em>, and <em>Register</em>.
 	    		</p>
+	    	</div> <!-- end of .col-8of12 -->
+	    	<div class="col-3of12">
+	    		<h2 class="right">skills used</h2>
+	    		<ul class="no-space right">
+	    			<li>Time management</li>
+	    			<li>Client relations</li>
+	    			<li>Handling domains and hosting</li>
+	    		</ul>
+	    	</div><!-- end of .col-4of12 -->
+	    	<div class="col-3of12">
+	    		<h2 class="right">tools</h2>
+	    		<ul class="no-space right">
+	    			<li>Zurb Foundation 5</li>
+	    			<li>JavaScript</li>
+	    			<li>HTML5, CSS3</li>
+	    			<li>JustHost, FileZilla</li>
+	    		</ul>
+	    	</div><!-- end of .col-4of12 -->
+	    </div> <!-- end of .flex-container -->
 
-	    	</div> <!-- end of .col-6of12 -->
+	    <div class="flex-container underlined thin padded-3 space-top">
 	    	<div class="col-6of12">
-	    		<img src="img/dca3_compressed.png" alt="DCA site screenshot 3">
-	    	</div> <!-- end of .col-6of12 -->
+	    		<h2 class="left">execution</h2>
+	    		<p class="left">
+	    		The first few meetings with my partner, Aaron, were quite smooth. By the end of our day 1 work session, the site's information architecture and most of the content had been written out and ready to go. After day 2, some moderately styled pages were completed with accompanying photos, giving us some optimism about the pace of the entire project.<br><br>
+
+	    		Unfortunately, some turbulence occurred during our development. Due to a lack of initial communication to the client, I was not informed that the event planning was <em>not yet finalized</em>, and that the list of scheduled activities was subject to change. On top of this, new requests appeared for functionality on the site that wasn't initially mentioned. Now the site required a page for a debate tournament, a way to track registration with payment, and media galleries promoting other events from the same organization.<br><br>
+
+	    		Despite the new requirements and unchanged deadline, Aaron and I pushed forward. Thanks to his incredible talent for editing and my familiarity with my framework's tools, we delivered the site on time. Some emergency workarounds involving Google Sheets and PayPal were necessary to satisfy the registration requirements, but thankfully all the technologies involved remained stable.
+	    		</p>
+	    	</div>
+	    	<div class="col-6of12">
+	    		<h2 class="right">reflection</h2>
+	    		<p class="right">
+	    		Debate Camp America's website was a gauntlet of a week for me. Most of the time was spent in a small coffee shop along North road (<a class="text-link dark" href="https://www.facebook.com/pages/Coffee-Monster/415413655278190" target="_blank">Coffee Monster</a>; try their affogato!), working from the afternoon until long after sundown.<br><br>
+
+	    		As my first <strong>freelance</strong> job, I have to say I have a new appreciation for people who dedicate their lives to this style of work. It's incredibly difficult keeping up with changing demands, fast deadlines, and cramped schedules. There are definitely areas where I could have planned ahead better. A CMS like Drupal or WordPress may have taken a bit of setup work to do, but their structure would have suited the client's needs quite well, the full site requirements should have been a condition of my employment, and the hosting services should have been provided earlier in the project timeline.<br><br>
+
+	    		Now that it's been delivered and the maintenance responsibilities of DCA 2015 are behind me, I feel like I've learned a lot about a piece of the web industry that I've always been curious about.
+	    		</p>
+	    	</div>
+	    </div> <!-- end of .flex-container -->
+
+	    <div class="flex-container">
+	    	<div class="col-12of12">
+	    		<h2 class="centered">images</h2>
+	    	</div>
+	    </div>
+
+	    <div class="flex-container underlined padded-3">
+	    	<div class="col-4of12 side-padded gallery">
+	    		<a href="img/dca2_compressed.png" class="image-link" target="_blank">
+	    			<img src="img/dca2_compressed.png" alt="Homepage screenshot 4">
+	    		</a>
+	    	</div><!-- end of .col-4of12 -->
+	    	<div class="col-4of12 side-padded gallery">
+	    		<a href="img/dca3_compressed.png" class="image-link" target="_blank">
+	    			<img src="img/dca3_compressed.png" alt="Homepage screenshot 2">
+	    		</a>
+	    	</div><!-- end of .col-4of12 -->
+	    	<div class="col-4of12 side-padded gallery">
+	    		<a href="img/dca1_compressed.png" class="image-link" target="_blank">
+	    			<img src="img/dca1_compressed.png" alt="Homepage screenshot 3">
+	    		</a>
+	    	</div><!-- end of .col-4of12 -->
 	    </div> <!-- end of .flex-container -->
 
 		<!-- Below The Paragraphs -->
-	    <div class="flex-container">
+	    <div class="flex-container space-top">
 	    	<div class="col-4of12">
-	    	<h2 class="centered">Project Status</h2>
+	    	<h2 class="centered">main objectives</h2>
+	    	<!-- <ul class="">
+	    		<li>Foundation</li>
+	    		<li>SASS/Compass</li>
+	    		<li>JavaScript</li>
+	    		<li>Html, CSS</li>
+	    	</ul> -->
+	    	<p class="centered">
+	    	<strong>
+	    		Speed, Content Clarity
+	    	</strong>
+	    	</p>
+	    	
+	    	</div> <!-- end of .col-3of12 -->
+	    	<div class="col-4of12">
+	    	<h2 class="centered">project status</h2>
+	    	<!-- <ul class="">
+	    		<li>HTML, CSS</li>
+	    		<li>JS Logic</li>
+	    		<li>Planning</li>
+	    		<li>Managing issues and new features</li>
+	    	</ul> -->
 	    	<p class="centered">
 	    	<strong>
 	    		Delivered
 	    	</strong>
 	    	</p>
-	    	</div> <!-- end of .col-3of12 -->
-	    	<div class="col-4of12">
-	    	<h2 class="centered">Components</h2>
-	    	<p class="centered">
-	    	<strong>
-	    		Foundation, SASS/Compass, JavaScript, HTML/CSS
-	    	</strong>
-	    	</p>
 	    	</div> <!-- end of .col-4of12 -->
 	    	<div class="col-4of12 has-buttons">
-	    	<h2 class="centered">What Would I Change?</h2>
+	    	<h2 class="centered">what would I change?</h2>
+	    	<!-- <ul class="">
+	    		<li>Writing code for a team environment</li>
+	    		<li>Proper use of Git/GitHub tools</li>
+	    		<li>Coordination on issues and feature requests</li>
+	    		<li>Learning to use new frameworks</li>
+	    	</ul> -->
+	    	<!-- <p class="centered">
+	    		Properly applying collaboration tools in Git
+	    	</p> -->
 	    	<p class="centered">
-	    		<strong>Push for truly finalized requirements early on</strong>
+	    		<strong>More thorough planning with the client, before starting development</strong>
 	    	</p>
 	    	</div> <!-- end of .col-4of12 -->
 	    </div> <!-- end of .flex-container -->
