@@ -18,6 +18,7 @@ $light-grey: #DDD;
 $light-med-grey: #868686;
 $medium-grey: #515151;
 $dark-grey: #272727;
+$even-darker-grey: #111111;
 
 $active-grey: #303030;
 $border-grey: rgba(186, 186, 186, 0.5);
@@ -210,8 +211,7 @@ nav.canvas {
   align-items: center;
   justify-content: center;
   height: 25rem;
-  background-color: $dark-grey;
-  background-image: url("../img/code-cropped_compressed.jpg");
+  background-color: $even-darker-grey;
   background-repeat: no-repeat;
   background-size: 100%;
 
